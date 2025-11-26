@@ -39,4 +39,14 @@
         android:layout_height="wrap_content"
         android:text="Enviar Instrucciones"/>
 
+    <TextView
+        android:id="@+id/tv_volver_login_recuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al Login"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"/>
+
 </LinearLayout>

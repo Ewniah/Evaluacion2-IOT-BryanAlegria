@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "190600435476",
+    "project_id": "evaluacion3-iot-ed007",
+    "storage_bucket": "evaluacion3-iot-ed007.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190600435476:android:cc8e1eaef60ac279c11401",
+        "android_client_info": {
+          "package_name": "com.example.evaluacion2_iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190600435476-moek5ervoqd960ad0b6u3kcmv52fotmk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.evaluacion2_iot",
+            "certificate_hash": "57ec7eed77cd2c81901fc95174499407ecf63b83"
+          }
+        },
+        {
+          "client_id": "190600435476-buelp642hu24q86qmibhgvalgacfa85r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYAFivQEX_BQNzhaWfKkH8pHEOPlBID2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190600435476-buelp642hu24q86qmibhgvalgacfa85r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

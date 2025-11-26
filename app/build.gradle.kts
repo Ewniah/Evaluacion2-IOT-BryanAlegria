@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -17,6 +19,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildFeatures {
+            viewBinding = true
+        }
     }
 
     buildTypes {
@@ -47,4 +53,13 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // Firebase y Google Login
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+
+    // Glide (Para cargar imágenes)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }

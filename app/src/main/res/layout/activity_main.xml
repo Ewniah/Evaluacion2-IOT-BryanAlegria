@@ -40,6 +40,17 @@
         android:layout_marginBottom="16dp"/>
 
     <Button
+        android:id="@+id/btn_google_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acceder con Google"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#757575"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:layout_marginBottom="16dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <Button
         android:id="@+id/btn_go_to_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +68,7 @@
         android:id="@+id/btn_check_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Verificar Bluetooth"
+        android:text="Verificar Bluetooth (Bonus)"
         android:layout_marginTop="16dp"/>
 
 </LinearLayout>
