@@ -13,9 +13,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nueva Noticia"
+            android:text="Editor de Noticias"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:layout_marginBottom="24dp"/>
 
         <EditText
@@ -29,7 +30,7 @@
             android:id="@+id/et_bajada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bajada"
+            android:hint="Bajada (Resumen)"
             android:layout_marginBottom="12dp"/>
 
         <EditText
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="URL Imagen (https://...)"
+            android:inputType="textUri"
             android:layout_marginBottom="12dp"/>
 
         <EditText
@@ -50,22 +52,34 @@
             android:id="@+id/et_fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha"
+            android:hint="Fecha (dd/mm/aaaa)"
+            android:inputType="date"
             android:layout_marginBottom="12dp"/>
 
         <EditText
             android:id="@+id/et_contenido"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:hint="Contenido..."
+            android:hint="Contenido completo..."
             android:gravity="top|start"
             android:background="@android:drawable/edit_text"
+            android:padding="8dp"
             android:layout_marginBottom="24dp"/>
 
         <Button
             android:id="@+id/btn_guardar_noticia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Publicar"/>
+            android:text="Publicar"
+            android:backgroundTint="@color/purple_500"/>
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar / Volver"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginTop="8dp"/>
+
     </LinearLayout>
 </ScrollView>

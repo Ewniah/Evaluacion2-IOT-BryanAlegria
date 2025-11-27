@@ -25,13 +25,12 @@ class AgregarNoticiaActivity : AppCompatActivity() {
         val etFecha = findViewById<EditText>(R.id.et_fecha)
         val etContenido = findViewById<EditText>(R.id.et_contenido)
         val btnGuardar = findViewById<Button>(R.id.btn_guardar_noticia)
-        val tvTituloPantalla = findViewById<TextView>(0) // Opcional: busca el TextView del título si quieres cambiar el texto "Nueva Noticia"
+        val btnCancelar = findViewById<Button>(R.id.btn_cancelar) // 👈 Referencia al nuevo botón
 
-        // 1. Verificar si venimos a EDITAR (¿Llegó un ID?)
+        // 1. Verificar si venimos a EDITAR
         val idDocumento = intent.getStringExtra("id")
 
         if (idDocumento != null) {
-            // MODO EDICIÓN: Rellenar campos
             btnGuardar.text = "Actualizar Noticia"
             etTitulo.setText(intent.getStringExtra("titulo"))
             etBajada.setText(intent.getStringExtra("bajada"))
@@ -41,6 +40,7 @@ class AgregarNoticiaActivity : AppCompatActivity() {
             etContenido.setText(intent.getStringExtra("contenido"))
         }
 
+        // 2. Lógica del botón Guardar/Actualizar
         btnGuardar.setOnClickListener {
             val titulo = etTitulo.text.toString()
             val bajada = etBajada.text.toString()
@@ -50,11 +50,12 @@ class AgregarNoticiaActivity : AppCompatActivity() {
             val contenido = etContenido.text.toString()
 
             if (titulo.isEmpty() || bajada.isEmpty()) {
-                Toast.makeText(this, "Faltan datos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Faltan datos obligatorios", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             btnGuardar.isEnabled = false
+            btnGuardar.text = "Guardando..."
 
             val mapa = hashMapOf(
                 "titulo" to titulo, "bajada" to bajada, "imageUrl" to url,
@@ -62,7 +63,7 @@ class AgregarNoticiaActivity : AppCompatActivity() {
             )
 
             if (idDocumento != null) {
-                // 2. ACTUALIZAR (Usamos .set para sobrescribir)
+                // ACTUALIZAR
                 db.collection("noticias").document(idDocumento).set(mapa)
                     .addOnSuccessListener {
                         Toast.makeText(this, "¡Noticia Actualizada!", Toast.LENGTH_SHORT).show()
@@ -73,7 +74,7 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                         Toast.makeText(this, "Error al actualizar", Toast.LENGTH_SHORT).show()
                     }
             } else {
-                // 3. CREAR NUEVA (Usamos .add para crear ID nuevo)
+                // CREAR
                 db.collection("noticias").add(mapa)
                     .addOnSuccessListener {
                         Toast.makeText(this, "¡Publicada!", Toast.LENGTH_SHORT).show()
@@ -84,6 +85,11 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                         Toast.makeText(this, "Error al publicar", Toast.LENGTH_SHORT).show()
                     }
             }
+        }
+
+        // 3. Lógica del botón Cancelar (NUEVO)
+        btnCancelar.setOnClickListener {
+            finish() // Simplemente cierra la pantalla y vuelve atrás
         }
     }
 }

@@ -9,6 +9,13 @@
     android:padding="24dp"
     tools:context=".RegistrarActivity">
 
+    <ImageView
+        android:id="@+id/iv_logo2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:src="@mipmap/ic_launcher_round" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
