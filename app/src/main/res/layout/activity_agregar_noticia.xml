@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva Noticia"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/et_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_bajada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bajada"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_url_imagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL Imagen (https://...)"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_autor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autor"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/et_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Contenido..."
+            android:gravity="top|start"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btn_guardar_noticia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publicar"/>
+    </LinearLayout>
+</ScrollView>

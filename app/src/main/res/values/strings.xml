@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Evaluacion2_IOT</string>
+    <string name="app_name">Ewniah News</string>
+
+    <string name="default_web_client_id">...</string>
 </resources>

@@ -5,9 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,17 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Evaluacion2_IOT">
 
-        <activity
-            android:name=".RegistrarActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".RecuperarActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+        <activity android:name=".VerNoticiaActivity" android:exported="false" />
+        <activity android:name=".AgregarNoticiaActivity" android:exported="false" />
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".RecuperarActivity" android:exported="false" />
+        <activity android:name=".RegistrarActivity" android:exported="false" />
 
         <activity
             android:name=".MainActivity"
@@ -38,7 +29,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-
 </manifest>
